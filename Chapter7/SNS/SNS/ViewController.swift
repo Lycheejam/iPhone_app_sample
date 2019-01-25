@@ -13,7 +13,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var imageView: UIImageView!
     @IBAction func showActivityView(_ sender: UIBarButtonItem) {
         let controller = UIActivityViewController(activityItems: [imageView.image!], applicationActivities: nil)
-        self.present(controller, animated: true, completion: nil)
+        self.present(controller, animated: true, completion: {print("表示完了")})
     }
     override func viewDidLoad() {
         super.viewDidLoad()
