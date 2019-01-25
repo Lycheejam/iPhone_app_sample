@@ -21,9 +21,12 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pyN-Lc-6me">
                                 <rect key="frame" x="164" y="319" width="47" height="29"/>
                                 <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="sayHello" destination="BYZ-38-t0r" eventType="touchUpInside" id="DGS-Vd-AsG"/>
+                                </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zR3-nH-9ku">
-                                <rect key="frame" x="166" y="203" width="43" height="22"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zR3-nH-9ku">
+                                <rect key="frame" x="139" y="203" width="96" height="22"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -32,10 +35,13 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="zR3-nH-9ku" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="166" id="3J6-3n-kFE"/>
+                            <constraint firstItem="pyN-Lc-6me" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="4b9-NI-0F3"/>
                             <constraint firstItem="pyN-Lc-6me" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="FH9-Fs-5jI"/>
                             <constraint firstItem="zR3-nH-9ku" firstAttribute="centerX" secondItem="pyN-Lc-6me" secondAttribute="centerX" id="LQ2-aY-7fK"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="pyN-Lc-6me" secondAttribute="bottom" constant="319" id="OC9-uU-d0R"/>
                             <constraint firstItem="pyN-Lc-6me" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="164" id="OvT-N9-XFW"/>
+                            <constraint firstItem="pyN-Lc-6me" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="V8Z-x4-Gj6"/>
+                            <constraint firstItem="zR3-nH-9ku" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="VM9-Qi-NJY"/>
                             <constraint firstItem="pyN-Lc-6me" firstAttribute="centerX" secondItem="zR3-nH-9ku" secondAttribute="centerX" id="Vgg-Tq-Rmz"/>
                             <constraint firstItem="zR3-nH-9ku" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="183" id="rcJ-UL-nFa"/>
                             <constraint firstItem="pyN-Lc-6me" firstAttribute="top" secondItem="zR3-nH-9ku" secondAttribute="bottom" constant="94" id="uF5-s6-vDY"/>
@@ -43,9 +49,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="label" destination="zR3-nH-9ku" id="yei-vY-nSh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="40.799999999999997" y="26.53673163418291"/>
         </scene>
     </scenes>
 </document>
