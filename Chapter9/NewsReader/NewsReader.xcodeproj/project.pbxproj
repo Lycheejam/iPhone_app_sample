@@ -13,6 +13,8 @@
 		198AE3EF21FCCC0100D1F278 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 198AE3ED21FCCC0100D1F278 /* LaunchScreen.storyboard */; };
 		198AE3F721FCCCE000D1F278 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198AE3F621FCCCE000D1F278 /* ListViewController.swift */; };
 		198AE3F921FCD69500D1F278 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198AE3F821FCD69500D1F278 /* Item.swift */; };
+		198AE3FC21FCE2A900D1F278 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 198AE3FB21FCE2A900D1F278 /* WebKit.framework */; };
+		198AE3FE21FCE2DD00D1F278 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198AE3FD21FCE2DD00D1F278 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		198AE3F021FCCC0100D1F278 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		198AE3F621FCCCE000D1F278 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		198AE3F821FCD69500D1F278 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		198AE3FB21FCE2A900D1F278 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		198AE3FD21FCE2DD00D1F278 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				198AE3FC21FCE2A900D1F278 /* WebKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +47,7 @@
 			children = (
 				198AE3E321FCCC0000D1F278 /* NewsReader */,
 				198AE3E221FCCC0000D1F278 /* Products */,
+				198AE3FA21FCE2A900D1F278 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,6 +62,7 @@
 		198AE3E321FCCC0000D1F278 /* NewsReader */ = {
 			isa = PBXGroup;
 			children = (
+				198AE3FD21FCE2DD00D1F278 /* DetailViewController.swift */,
 				198AE3E421FCCC0000D1F278 /* AppDelegate.swift */,
 				198AE3E821FCCC0000D1F278 /* Main.storyboard */,
 				198AE3F621FCCCE000D1F278 /* ListViewController.swift */,
@@ -65,6 +72,14 @@
 				198AE3F021FCCC0100D1F278 /* Info.plist */,
 			);
 			path = NewsReader;
+			sourceTree = "<group>";
+		};
+		198AE3FA21FCE2A900D1F278 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				198AE3FB21FCE2A900D1F278 /* WebKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,6 +156,7 @@
 				198AE3F721FCCCE000D1F278 /* ListViewController.swift in Sources */,
 				198AE3F921FCD69500D1F278 /* Item.swift in Sources */,
 				198AE3E521FCCC0000D1F278 /* AppDelegate.swift in Sources */,
+				198AE3FE21FCE2DD00D1F278 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
