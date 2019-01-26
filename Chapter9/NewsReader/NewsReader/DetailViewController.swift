@@ -17,7 +17,7 @@ class DetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //URLインスタンス生成
+        //遷移元画面（ListViewController）から渡されたURL情報をもとにURLインスタンス生成
         if let url = URL(string: self.link) {
             //requestインスタンス生成
             let request = URLRequest(url: url)

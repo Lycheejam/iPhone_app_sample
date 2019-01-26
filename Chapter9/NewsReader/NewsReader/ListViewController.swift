@@ -90,11 +90,17 @@ class ListViewController: UITableViewController, XMLParserDelegate {
         self.tableView.reloadData()
     }
     
+    //prepare 画面間の値の受け渡しにつ使用するメソッド
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        //ユーザがタップ（選択）したセルのindexPathを取得
         if let indexPath = self.tableView.indexPathForSelectedRow {
+            //取得したindexPathから該当の記事を特定し取得
             let item = items[indexPath.row]
+            //遷移先のコントローラーを格納
             let controller = segue.destination as! DetailViewController
+            //遷移先画面のタイトルプロパティをセット
             controller.title = item.title
+            //遷移先画面のlinkプロパティに該当記事のURLをセット
             controller.link = item.link
         }
     }
