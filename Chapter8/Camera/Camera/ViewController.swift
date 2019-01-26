@@ -13,11 +13,15 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBOutlet weak var imageView: UIImageView!
     @IBAction func launchCamera(_ sender: UIBarButtonItem) {
         
-        let camera = UIImagePickerController.SourceType.camera
+        //列挙体 そ省略可
+        //let camera = UIImagePickerController.SourceType.camera
         
-        if UIImagePickerController.isSourceTypeAvailable(camera) {
+        //if UIImagePickerController.isSourceTypeAvailable(camera) {
+        //列挙体省略バージョン
+        if UIImagePickerController.isSourceTypeAvailable(.camera) {
             let picker = UIImagePickerController()
-            picker.sourceType = camera
+            //picker.sourceType = camera
+            picker.sourceType = .camera
             picker.delegate = self
             self.present(picker, animated: true)
         }
@@ -25,6 +29,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     func imagePickerController(_ picker: UIImagePickerController,
                                didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        //ダウンキャスティング（下位オブジェクトへのキャスト）
         let image = info[UIImagePickerController.InfoKey.originalImage] as! UIImage
         self.imageView.image = image
         UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
