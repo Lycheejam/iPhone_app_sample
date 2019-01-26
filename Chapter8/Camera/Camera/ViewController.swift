@@ -23,11 +23,12 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         }
     }
     
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-        let image = info[UIImagePickerControllerOriginalImage] as! UIImage
+    func imagePickerController(_ picker: UIImagePickerController,
+                               didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        let image = info[UIImagePickerController.InfoKey.originalImage] as! UIImage
         self.imageView.image = image
         UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
-        self.present(picker, animated: true)
+        self.dismiss(animated: true)
     }
     
     override func viewDidLoad() {
