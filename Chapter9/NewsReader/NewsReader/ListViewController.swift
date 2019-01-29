@@ -43,7 +43,7 @@ class ListViewController: UITableViewController, XMLParserDelegate {
         //記事格納用配列の初期化
         self.items = []
         //指定ファイルの取得
-        if let url = URL(string: "https://www.apple.com/ja/newsroom/rss-feed.rss") {
+        if let url = URL(string: "https://jp.techcrunch.com/feed/") {
             //XMLParserインスタンス生成
             //キーワード:OptionalBinding P332参照
             if let parser = XMLParser(contentsOf: url) {
